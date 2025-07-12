@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Caption Generator</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Instagram Caption Generator</h1>
+
+        </div>
+
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-content">
+
+                <div class="upload-text">Drop your photo here</div>
+
+                <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                    upload photo
+                </button>
+            </div>
+            <button class="image-overlay" id="removeImage">×</button>
+        </div>
+
+        <div class="caption-section">
+            <textarea class="caption-textarea" id="captionText" placeholder="Your generated caption will appear here..."
+                readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <!--<button class="btn primary" id="generateBtn">
+                <span class="btn-text">Generate Caption</span>
+                <div class="loading hidden">
+                    <div class="spinner"></div>
+                    <span>Generating...</span>
+                </div>-->
+            </button>
+            <button class="btn" id="copyBtn">Copy Caption</button>
+            <button class="btn" id="newCaptionBtn">New Caption</button>
+        </div>
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    <div class="toast" id="toast"></div>
+
+    <script src="./static/script.js"></script>
+</body>
+
+</html>
